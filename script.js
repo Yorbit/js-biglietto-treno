@@ -1,5 +1,9 @@
 console.log('JS OK');
 
+let messagePrice;
+
+const outputticketFinalPrice = document.getElementById('ticketFinalPrice');
+
 const kmNumb = parseInt(prompt('Inserisci qui quanti km devi percorrere'));
 console.log(kmNumb);
 
@@ -9,13 +13,13 @@ console.log(userAge);
 const kmPrice = ('0.21');
 console.log(kmPrice);
 
-let ticketpriceDecimals = ticketFinalPrice.toFixed(2);
-console.log(ticketpriceDecimals, '€');
 
 let ticketFinalPrice = (kmNumb * kmPrice);
 
+let ticketpriceDecimals = ticketFinalPrice.toFixed(2);
+console.log(ticketpriceDecimals, '€');
 
-if (userAge <= 18) {
+if (userAge < 18) {
 
     const discountSmall = (ticketFinalPrice * 20) / 100;
 
@@ -45,3 +49,6 @@ else if (userAge >= 65) {
     console.log(ticketDecimals, '€');
 }
 
+const paragraph = document.getElementById('ticketFinalPrice');
+
+document.getElementById('ticketFinalPrice').innerHTML = 'Il prezzo totale del biglietto' + ' ' + ' ' + ticketFinalPrice + ' ' + '€'
