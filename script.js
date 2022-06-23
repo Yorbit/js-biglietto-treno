@@ -31,6 +31,8 @@ if (Age < 18) {
     let priceDiscountSmallDecimals = (priceDiscountSmall.toFixed(2));
     console.log(priceDiscountSmallDecimals, '€');
 
+    document.getElementById('ticketFinalPrice').innerHTML = 'Il prezzo totale del biglietto' + ' ' + ticketFinalPrice - discountSmall + '€'
+
 }
 
 else if (Age >= 65) {
@@ -45,9 +47,12 @@ else if (Age >= 65) {
     let priceDiscountBigDecimals = (priceDiscountBig.toFixed(2));
     console.log(priceDiscountBigDecimals, '€');
 
-    let ticketDecimals = ticketFinalPrice.toFixed(2);
-    console.log(ticketDecimals, '€');
+    document.getElementById('ticketFinalPrice').innerHTML = 'Il prezzo totale del biglietto' + ' ' + ticketFinalPrice - discountBig + '€'
+
 }
+
+let ticketDecimals = ticketFinalPrice.toFixed(2);
+console.log(ticketDecimals, '€');
 
 const paragraph = document.getElementById('ticketFinalPrice');
 
